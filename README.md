@@ -1,6 +1,6 @@
 <h1>Despues de instalar laravel 10 especificamente <strong>(11 aún no funciona)<strong></h1>
 
-1-Crear proyecto laravel 10 -> composer create-project laravel/laravel:^10.0 example-app
+1-Crear proyecto laravel 10 -> composer create-project laravel/laravel:^10.0 example-app <br>
 2-Configurar proyecto -> schema, .env, migraciones, etc.
 3-Poner los comandos posteriores
 4-composer require open-admin-org/open-admin --with-all-dependencies

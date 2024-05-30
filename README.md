@@ -27,10 +27,9 @@
 ], <br>
 
 <strong>Al momento de usar el confi imagenes tambien se debe de modificar los hoks del controlador</strong>
-
-<p>Por ejemplo si esta asi ->//$grid->column('image', __('Image'));</p> <br>
-<p>Pasarlo asi -> $grid->column('image')->image();</p> <br>
-<p>Para que se logre apreciar las imagenes</p> <br>
+<p>Por ejemplo si esta asi ->//$grid->column('image', __('Image'));</p>
+<p>Pasarlo asi -> $grid->column('image')->image();</p>
+<p>Para que se logre apreciar las imagenes</p>
 
 <h3>Despues de haber creado un mc </h3>
 1-Agregar la ruta a App/Admin/routes.php <br> 

@@ -1,47 +1,47 @@
 <h1>Despues de instalar laravel 10 especificamente <strong>(11 aún no funciona)<strong></h1>
 
 1-Crear proyecto laravel 10 -> composer create-project laravel/laravel:^10.0 example-app <br>
-2-Configurar proyecto -> schema, .env, migraciones, etc.
-3-Poner los comandos posteriores
-4-composer require open-admin-org/open-admin --with-all-dependencies
-5-php artisan vendor:publish --provider="OpenAdmin\Admin\AdminServiceProvider"
-6-php artisan admin:install
-7-Despues de esto verificar y ejecutar el php artisan serve, entrando a la ruta /admin
-8-Por defecto el user es admin y la contraseña admin, de igual forma se puede ver en las tablas.
+2-Configurar proyecto -> schema, .env, migraciones, etc. <br>
+3-Poner los comandos posteriores <br>
+4-composer require open-admin-org/open-admin --with-all-dependencies <br>
+5-php artisan vendor:publish --provider="OpenAdmin\Admin\AdminServiceProvider" <br>
+6-php artisan admin:install <br>
+7-Despues de esto verificar y ejecutar el php artisan serve, entrando a la ruta /admin <br>
+8-Por defecto el user es admin y la contraseña admin, de igual forma se puede ver en las tablas. <br>
 
-<h2>Error de configuracion Users</h2>
-1-Entrar a la carpeta Config
-2-Abrir el archivo php filesystems.php
-3-En disks poner lo siguiente 
-//esto seria la config simple
-'admin' =>[
-    'driver' => 'local',
-    'root' => storage_path('app'),
-],
-//Config imagenees
-'admin' => [
-    'driver' => 'local',
-    'root' => public_path('uploads'),
-    'visibility' => 'public',
-    'url' => env('APP_URL').'/uploads'
-],
+<h2>Error de configuracion Users</h2> 
+1-Entrar a la carpeta Config <br>
+2-Abrir el archivo php filesystems.php <br>
+3-En disks poner lo siguiente  <br>
+//esto seria la config simple <br>
+'admin' =>[ <br>
+    'driver' => 'local', <br>
+    'root' => storage_path('app'), <br>
+], <br>
+//Config imagenees <br>
+'admin' => [ <br>
+    'driver' => 'local', <br>
+    'root' => public_path('uploads'), <br>
+    'visibility' => 'public', <br>
+    'url' => env('APP_URL').'/uploads' <br>
+], <br>
 
 <strong>Al momento de usar el confi imagenes tambien se debe de modificar los hoks del controlador</strong>
 
-<p>Por ejemplo si esta asi ->//$grid->column('image', __('Image'));</p>
-<p>Pasarlo asi -> $grid->column('image')->image();</p>
-<p>Para que se logre apreciar las imagenes</p>
+<p>Por ejemplo si esta asi ->//$grid->column('image', __('Image'));</p> <br>
+<p>Pasarlo asi -> $grid->column('image')->image();</p> <br>
+<p>Para que se logre apreciar las imagenes</p> <br>
 
 <h3>Despues de haber creado un mc </h3>
-1-Agregar la ruta a App/Admin/routes.php
-2-Importar controloladores, Router, Admin, etc.
-3-use Illuminate\Support\Facades\Route;
-4-use OpenAdmin\Admin\Facades\Admin
-5-la ruta te la dara al crear el controlador el OpenAdmin -> Agg abajo de HomeController@index
+1-Agregar la ruta a App/Admin/routes.php <br> 
+2-Importar controloladores, Router, Admin, etc.<br>
+3-use Illuminate\Support\Facades\Route; <br> 
+4-use OpenAdmin\Admin\Facades\Admin <br>
+5-la ruta te la dara al crear el controlador el OpenAdmin -> Agg abajo de HomeController@index <br>
 
-<h2>Instalar Helpers -> crear modelos, controladores, etc.</h2> 
-1-composer require open-admin-ext/helpers
-2-php artisan admin:import helpers
+<h2>Instalar Helpers -> crear modelos, controladores, etc.</h2>
+1-composer require open-admin-ext/helpers <br>
+2-php artisan admin:import helpers <br>
 
 
 <h2><a href="https://open-admin.org/docs" target="_blank">Documentacipon OpenAdmin</a></h2>
